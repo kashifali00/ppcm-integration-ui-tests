@@ -1,0 +1,34 @@
+{
+  "name": "hpp-cypres-e2e-automation",
+  "version": "1.0.0",
+  "description": "to run both e2e and api test automation",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm install --loglevel error && saucectl configure -u oauth-tautomation184-3e044 -a e5fa89ab-4659-4fb8-9c14-f5848066cb30",
+    "cypress:open": "cypress open",
+    "test": "npm run cypress-test",
+    "cypress-test": "cypress run --browser electron --headed --record --key b038e26f-6c4c-4907-a6a4-7b80988dfab0 --tag staging",
+    "smoke": "cypress run --spec 'cypress/e2e/features/smoke/*.feature' --browser chrome --headed --record --key b038e26f-6c4c-4907-a6a4-7b80988dfab0 --tag smoke",
+    "regression": "cypress run --spec 'cypress/e2e/features/*.feature' --browser webkit --headed --record --key b038e26f-6c4c-4907-a6a4-7b80988dfab0 --tag regression",
+    "run-test-saucelab": "saucectl run",
+    "integration": "cypress run --env test-env=dev --spec 'cypress/e2e/integration/*.feature'",
+    "ppcm-ui-test": "cypress run --spec 'cypress/e2e/features/*.feature' --browser electron --headed"
+  },
+  "author": "KashifAli",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^12.2.0",
+    "@cypress/webpack-preprocessor": "^5.12.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.19.0",
+    "@babel/preset-env": "7.19.0",
+    "allure-commandline": "^2.18.1",
+    "babel-loader": "8.2.5",
+    "cypress": "^10.10.0",
+    "cypress-mochawesome-reporter": "^3.2.2",
+    "playwright-webkit": "^1.26.1",
+    "saucectl": "^0.107.2",
+    "webpack": "5.74.0"
+  }
+}

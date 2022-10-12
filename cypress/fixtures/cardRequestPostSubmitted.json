@@ -1,0 +1,31 @@
+{
+    "accountNum": "16527497",
+    "requestDetails": {
+      "firstName": "New CASE",
+      "lastName": "string",
+      "jobTitle": "string",
+      "email": "email@email.com",
+      "phoneNum": "333-333-3333",
+      "accountName": "Test Account Name"
+    },
+    "cardDetails": [
+  
+      {
+        "cardHolderFirstName": "JavaTesting",
+        "cardHolderLastName": "RestAssured",
+        "nickname": "Automation",
+        "spendingLimitAmount": 0,
+        "spendingLimitFrequency": "none",
+        "eReceiptEmailCard": "Automation@RestAssured.com",
+        "mailingAddress": {
+          "addressLine1": "Oracle",
+          "addressLine2": "string",
+          "city": "string",
+          "state": "DC",
+          "zip": "99999"
+        }
+      }
+    ],
+    "status": "SUBMITTED",
+    "source": "CSR"
+  }
